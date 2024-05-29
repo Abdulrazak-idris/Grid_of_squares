@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100vw;
+}
+
+.btn {
+    padding: 0.3rem 0.5rem;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: green;
+
+}
+
+.container {
+    background-color: #ececec;
+    height: 400px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+input {
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: small;
+    padding: 7px 5px;
+    outline: none;
+    width: 250px;
+}
+
+.input_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
