@@ -7,19 +7,12 @@ let grid = document.querySelector(".grid")
 btn.addEventListener("click", () => {
      let inputValue = input.value;
         if (inputValue > 0 && inputValue < 31) {
+            let divs = Array.from(container.getElementsByClassName("grid"));
             for (let i = 0; i < inputValue; i++) {
                 let newElement = document.createElement("div");
                 newElement.className = "grid"
                 let divNumber = Math.round((Math.random() * 30));
-                let divs = Array.from(container.getElementsByClassName("grid"));
-                for (let j = 0; j < divs.length; j++) {
-                    // do {
-                    //     divNumber = Math.round((Math.random() * 30));
-                    // } while (+(divs[j]) === divNumber); 
-                    while (+(divs[j].innerHTML) === divNumber) {
-                        divNumber = Math.round((Math.random() * 30));
-                    }
-                }
+                divs.includes
                 newElement.textContent = divNumber;
                 container.appendChild(newElement)
             } 
