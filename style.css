@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100%;
-    width: 100vw;
-}
 
 .btn {
     padding: 0.3rem 0.5rem;
@@ -23,9 +19,13 @@ body {
 }
 
 .container {
+    display: flex;
+    align-content: start;
+    flex-wrap: wrap;
+    gap: 5px;
     background-color: #ececec;
-    height: 400px;
-    width: 400px;
+    height: 370px;
+    width: 380px;
     margin: 20px auto;
 }
 
@@ -33,7 +33,7 @@ input {
     border-radius: 20px;
     border: 1px solid black;
     font-size: small;
-    padding: 7px 5px;
+    padding: 7px 10px;
     outline: none;
     width: 250px;
 }
@@ -42,4 +42,31 @@ input {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(5);
+    }
+
+    50% {
+        transform: rotate(90deg);
+        background-color: red;
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    height: 50px;
+    width: 50px;
 }

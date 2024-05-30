@@ -1,1 +1,1 @@
-# Grid_of_squares
+# Generate number of grid based on user input.
