@@ -6,14 +6,17 @@ let grid = document.querySelector(".grid")
 
 btn.addEventListener("click", () => {
      let inputValue = input.value;
+     let numArr = [];;
         if (inputValue > 0 && inputValue < 31) {
-            let divs = Array.from(container.getElementsByClassName("grid"));
             for (let i = 0; i < inputValue; i++) {
+                let randomNum = Math.round((Math.random() * 30));
+                while (numArr.includes(randomNum) || randomNum === 0) {
+                    randomNum = Math.round((Math.random() * 30));
+                }
+                numArr.push(randomNum);
                 let newElement = document.createElement("div");
-                newElement.className = "grid"
-                let divNumber = Math.round((Math.random() * 30));
-                divs.includes
-                newElement.textContent = divNumber;
+                newElement.className = "grid";
+                newElement.textContent = randomNum;
                 container.appendChild(newElement)
             } 
         } else if (inputValue === "") {
@@ -25,6 +28,3 @@ btn.addEventListener("click", () => {
         }
 })
 
-grid.addEventListener("click", (event) => {
-    event.target.style.backgroundColor = "red";
-})
