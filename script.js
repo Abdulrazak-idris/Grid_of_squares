@@ -6,8 +6,9 @@ let grid = document.querySelector(".grid")
 
 btn.addEventListener("click", () => {
      let inputValue = input.value;
-     let numArr = [];;
+     let numArr = [];
         if (inputValue > 0 && inputValue < 31) {
+            container.innerHTML = "";
             for (let i = 0; i < inputValue; i++) {
                 let randomNum = Math.round((Math.random() * 30));
                 while (numArr.includes(randomNum) || randomNum === 0) {
@@ -18,12 +19,12 @@ btn.addEventListener("click", () => {
                 newElement.className = "grid";
                 newElement.textContent = randomNum;
                 container.appendChild(newElement)
-            } 
+            }
+            input.value = ""; 
         } else if (inputValue === "") {
             alert("Input is empty")
         } else {
             alert("Your number does not range from 1-30");
-            alert("Please try again");
             input.value = "";
         }
 })

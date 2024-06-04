@@ -70,3 +70,8 @@ input {
     height: 50px;
     width: 50px;
 }
+
+.grid:hover {
+    animation-name: pop;
+    animation-duration: 5s;
+}
